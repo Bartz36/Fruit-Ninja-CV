@@ -13,7 +13,7 @@ videoCapture.set(3, camWidth)
 videoCapture.set(4, camHeight)
 frameReduction = 100
 
-handDetector = HandDetector(detectionCon=0.65, maxHands=1)
+handDetector = HandDetector(detectionCon=0.90, maxHands=1)
 mouse = Controller()
 screen_width, screen_height = pyautogui.size()
 
@@ -33,6 +33,16 @@ while True:
         convert_x = int( np.interp(index_x, (frameReduction, camWidth - frameReduction), (0, screen_width)))
         convert_y = int( np.interp(index_y, (frameReduction, camHeight - frameReduction), (0, screen_height)) )
         mouse.position = (convert_x, convert_y)
+
+        # hold down the mouse button if my pinky finger is down
+        # else, release the mouse button
+        # you can slice with your pink down and stop slicing (in case of hitting a bomb) by putting your pinky up
+        fingersList = handDetector.fingersUp(hands[0])
+        if fingersList[4] == 1:
+            pyautogui.mouseUp()
+        else:
+            pyautogui.mouseDown()
+            
 
     
     
