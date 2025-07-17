@@ -24,12 +24,3 @@ Ideal for experimenting with human-computer interaction (HCI), gesture-based int
 - Simulates mouse **click/unclick** based on the **pinky finger's** position.
 - Draws visual markers and a boundary box on the webcam feed.
 
-
-## Getting Started
-
-### 1. Install Dependencies
-
-```bash
-pip install opencv-python mediapipe pyautogui pynput cvzone numpy
-```
-
