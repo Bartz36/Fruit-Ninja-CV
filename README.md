@@ -1,4 +1,4 @@
-# Play Fruit Ninja with Your Hand!
+# 🍉 Play Fruit Ninja with Your Hand!
 
 > Control your computer's mouse using hand gestures and finger tracking in real time — built with Python, OpenCV, and MediaPipe.
 
@@ -8,7 +8,7 @@ This project leverages computer vision and hand-tracking to simulate mouse movem
 
 Ideal for experimenting with human-computer interaction (HCI), gesture-based interfaces, or prototyping accessibility tools.
 
-## 🛠Tech Stack
+## Tech Stack
 
 - **Python**
 - **OpenCV** for image processing
